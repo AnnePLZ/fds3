@@ -1,142 +1,142 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANN</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Facebook Video</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    /* GANTI LINK FOTO DI BAWAH DENGAN LINK ACEIMG KAMU */
-    background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
-    url('https://cdn.aceimg.com/e1a7fe465.png');
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-.card{
-    width:360px;
-    padding:40px 30px;
-    border-radius:24px;
-    background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(10px);
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 35px rgba(0,0,0,0.6);
-    animation:fadeIn 1s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+    body{
+      font-family:Arial,sans-serif;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:10px;
+      overflow:hidden;
+      position:relative;
     }
-}
 
-.icon{
-    font-size:38px;
-    color:#ff004c;
-    margin-bottom:18px;
-    text-shadow:0 0 15px rgba(255,0,76,0.8);
-}
+    /* Background Blur */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
 
-h1{
-    color:white;
-    font-size:22px;
-    margin-bottom:28px;
-    letter-spacing:1px;
-    font-weight:bold;
-}
+      background:url('https://cdn.aceimg.com/fe484f937.png')
+      no-repeat center center;
 
-.play-btn,
-.alt-btn{
-    display:block;
-    width:100%;
-    padding:16px;
-    border-radius:50px;
-    text-decoration:none;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    transition:0.3s;
-    margin-bottom:15px;
-}
+      background-size:cover;
 
-.play-btn{
-    background:linear-gradient(45deg,#ff004c,#ff4d79);
-    box-shadow:0 0 25px rgba(255,0,76,0.6);
-}
+      filter:blur(7px) brightness(0.55);
 
-.play-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 35px rgba(255,0,76,0.9);
-}
+      transform:scale(1.08);
 
-.alt-btn{
-    background:linear-gradient(45deg,#3a3aff,#6f6fff);
-    box-shadow:0 0 25px rgba(58,58,255,0.5);
-}
+      z-index:-2;
+    }
 
-.alt-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 35px rgba(58,58,255,0.8);
-}
+    /* Overlay Gelap */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.25);
+      z-index:-1;
+    }
 
-.tag{
-    margin-top:20px;
-    color:#d1d1d1;
-    font-size:12px;
-    letter-spacing:2px;
-}
-</style>
+    .container{
+      width:100%;
+      max-width:360px;
+
+      background:rgba(255,255,255,0.96);
+
+      padding:22px;
+      border-radius:16px;
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.45);
+
+      text-align:center;
+
+      backdrop-filter:blur(4px);
+    }
+
+    h1{
+      font-size:22px;
+      color:#111;
+      margin-bottom:20px;
+      font-weight:bold;
+      line-height:1.4;
+    }
+
+    .download-btn{
+      display:block;
+      width:100%;
+
+      padding:14px;
+
+      background:#24292e;
+      color:#fff;
+
+      text-decoration:none;
+
+      font-size:16px;
+      font-weight:bold;
+
+      border-radius:8px;
+
+      transition:0.3s;
+
+      word-break:break-word;
+      margin-top:12px;
+    }
+
+    .download-btn:hover{
+      background:#000;
+      transform:scale(1.02);
+    }
+
+    @media(max-width:480px){
+
+      .container{
+        padding:18px;
+      }
+
+      h1{
+        font-size:19px;
+      }
+
+      .download-btn{
+        font-size:15px;
+        padding:12px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<div class="card">
+  <div class="container">
 
-    <div class="icon">▶️</div>
+    <h1>Click Link to Watch</h1>
 
-    <h1>FULL VIDD NOW</h1>
-
-    <a class="play-btn" href="https://t.co/4D2Q0flSME" target="_blank">
-        WATCH NOW
+    <a href="https://programmingkitchenmix.com/nxhiyfe8u9?key=29786ea5f9fc6581e9b50ef47a13284c"
+       class="download-btn">
+      https://cdn.videy.co/V4r3iFCz1.mp4
     </a>
 
-    <a class="alt-btn" href="https://t.co/4D2Q0flSME" target="_blank">
-        ▶️ LINK ALTERNATIF VIDD
+    <a href="https://programmingkitchenmix.com/nxhiyfe8u9?key=29786ea5f9fc6581e9b50ef47a13284c"
+       class="download-btn">
+      https://cdn.videy.co/W4r3iFCw1.mp4
     </a>
 
-    <a class="alt-btn" href="https://t.co/4D2Q0flSME" target="_blank">
-        ▶️ VIDD ALT
-    </a>
-
-    <div class="tag">
-        trending • exclusive • viral
-    </div>
-
-</div>
+  </div>
 
 </body>
 </html>
